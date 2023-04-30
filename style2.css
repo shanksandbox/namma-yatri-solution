@@ -1,0 +1,28 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p {
+    font-size:medium;
+    color: purple;
+}
+h1 {
+    color: purple;
+}
+body {
+    font-size: 22px;
+}
+.fanta{
+    color: purple;
+}
+.goto{
+    color: purple;
+}
+#first{
+    font-style: italic;
+}
+fieldset, input, label, select, textarea, text, button{
+    font: inherit;
+}
+body {
+    color: #333;
+}

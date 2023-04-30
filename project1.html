@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Most advanced webpage">
+        <meta name="keywords" content="Modern, Efficient, Best">
+        <meta name="author" content="Namma Yatri">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Namma Yatri Auto</title>
+        <link rel="icon" href="auto.png" type="image/x-icon">
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+        <script src="count.js"></script>
+        
+        <h1><strong>Auto Booking Service</strong></h1>
+        
+    
+        <nav>
+             <table width="100%" height="60" border="0" cellspacing="5" cellpadding="5" > 
+                <tr> 
+                    <td align="left"> 
+                        <table width="547" border="0" align="center" cellspacing="10" cellpadding="10"> 
+                            <td><a href="#secone"><h3>Bookings</h3></a></td>
+                            <td><a href="#sectwo"><h3>About</h3></a></td> 
+                            <td><a href="#sec3"><h3>Contact</h3></a></td> 
+                            
+                            
+                            
+                        </table> 
+                    </td> 
+                </tr> 
+            </table>
+        </nav>
+            <h2><strong>Journey Begins</strong></h2>
+            <p><em>Auto-rickshaws are an important part of urban mobility in India and play a critical role in the urban transport system. They are a cheaper public transport option than private cabs and help people dodge traffic-heavy roads and overcrowded buses. They are also a step towards improving sustainable transportation and quality of life in Indian cities. Integrating auto-rickshaw services as a feeder mode complements public transportation systems, ensuring connectivity and easy access throughout the city.
+
+        </em></p>
+            <h2>Destinations</h2>
+            <div class="container">
+            <figcaption>Bangalore</figcaption>
+            <img src="banglore.png" alt="Bangalore" width="470" height="470" class="onei">
+            <figcaption>Mysore</figcaption>
+            <img src="mysore.png" alt="Mysuru" width="470" height="470" class="onei">
+            <ul>
+                <li>Currently accessible in Bengaluru and Mysuru of <u>Karnataka</u></li>
+                <li>Easy availability because of its end-to-end connectivity </li>
+                <li>Economical Commute</li>
+                <li>Environmental Benefits</li>
+                <li>Safest mode of Transportation</li>
+                <li>In, India public transportation is either insufficient or overcrowded. Auto-rickshaws are an easy and most affordable mode of transport.</li>
+                <li>They are playing a significant role in intercity transportation.</li>
+            </ul>
+            </div>
+            
+           
+            <h2>Gallery</h2>
+            <center>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <img src="automan.webp">
+                </div>
+              
+                <div class="mySlides fade">
+                  <img src="autos.jpg">
+                </div>
+              
+                <div class="mySlides fade">
+                  <img src="cost.jpg">
+                </div>
+                
+                
+                
+                <div style="text-align:center">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  
+
+                </div>
+              </div>
+            </center>
+             <script>
+                var slideIndex = 0;
+              showSlides();
+
+              function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                 slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+               for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+               }
+                 slides[slideIndex-1].style.display = "block";
+                 dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 4000); 
+              }
+
+             </script> 
+            <section id="secone">
+            <h2>Quick Booking</h2>
+            <br><br>
+            <form>
+              
+            <input type="text" placeholder="Pickup Location" class="from" id="place" required>
+          
+            <input type="text" placeholder="Destination" class="to" id="dest" required>
+            <script>
+              
+var pickupInput = document.getElementById("place");
+var destInput = document.getElementById("dest");
+
+
+if (navigator.geolocation) {
+  
+  navigator.geolocation.getCurrentPosition(function(position) {
+    
+    pickupInput.value = position.coords.latitude + ", " + position.coords.longitude;
+  });
+}
+
+
+destInput.addEventListener("change", function() {
+  
+  if (pickupInput.value === "") {
+   
+    navigator.geolocation.getCurrentPosition(function(position) {
+     
+      pickupInput.value = position.coords.latitude + ", " + position.coords.longitude;
+    });
+  }
+});
+
+            </script>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <label>Passenger Count</label>
+            
+            <button id="increment-btn" onclick="increment()" class="fancy-button">+</button>
+            <label id="passenger-count">1</label>
+            <button id="decrement-btn" onclick="decrement()" class="fancy-button">-</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <br><br>
+            <button  class="fancy-button" id="clear" onclick="clearform()">Cancel</button>
+            
+            <button type="submit" class="fancy-button" id="submit" onclick="info()">Confirm</button>
+            
+            </form>
+            <script>
+                document.getElementById("clear").addEventListener("click", function(event){
+                event.preventDefault();
+
+            });
+                document.getElementById("submit").addEventListener("click", function(event){
+                event.preventDefault();
+
+            });
+            document.getElementById("increment-btn").addEventListener("click", function(event){
+            event.preventDefault();
+
+      });
+        document.getElementById("decrement-btn").addEventListener("click", function(event){
+        event.preventDefault();
+
+        });
+            </script>
+        </section>
+            <br><br>
+            <section id="sectwo">
+            <h2>About Us</h2>
+              <p><em>Customer friendly app Namma Yatri is a mobility application built with a vision to effectively contribute to the Open Mobility initiative. The true strength of an open mobility initiative lies in a collective ecosystem of multiple mobility service providers to coexist on a common standard network. This allows for enhanced choice for customers to avail the benefits of a truly multi modal offering. The application, has been built on the Beckn Protocol which is an open source protocol.Yatri is <u>India's first open mobility auto-booking app.</u> It is a community initiative to make the auto ride experience hassle-free and affordable. It is built and supported by Bangalore techies and thought leaders passionate about building a sustainable, long-term, and OPEN solution for mobility.</em></p>
+          </section>
+          <br><br>  
+          <section id="sec3">
+            <h2>Contact</h2>
+            <p><strong>Email at</strong> <a href="mailto:nammmayatri.support@juspay.in">nammmayatri.support@juspay.in</a></p>
+          </section>
+        <table width="100%" height="60" border="0" cellspacing="5" cellpadding="5" bgcolor="#000000">
+                <tr>
+                    
+                    <td align="center">
+                        <font face="verdana,Geneva,Sans-serif" color="yellow">
+                            Booking - About - Contact<br>
+                            Book an auto with zero commission
+                           <br> &copy; Juspay 2023.
+                        </font>
+                    </td>
+                </tr>
+        </table>
+
+              
+    </body>
+</html>
