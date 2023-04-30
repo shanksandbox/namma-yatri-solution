@@ -1,4 +1,5 @@
-![](./img1.png)(./img2.jpg)
+![](./img1.png)
+![](./img2.jpg)
 # Namma Yatri   
 Problem Statement 2: Booking Without App
 
